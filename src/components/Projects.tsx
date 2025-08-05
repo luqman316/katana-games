@@ -8,13 +8,12 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselPrevious,
   CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import Autoplay from "embla-carousel-autoplay";
-import ProjectLayout from "@/components/ProjectLayout";
 import ProjectLayout1 from "@/components/ProjectLayout";
+import Autoplay from "embla-carousel-autoplay";
 
 type ProjectsProps = {
   limit?: number;
@@ -32,8 +31,6 @@ function Projects({ limit }: ProjectsProps) {
       transition={{ duration: 0.5 }}
       className="container mx-auto px-4 sm:px-6 py-6  text-white"
     >
-
-
       <Carousel plugins={[autoplayPlugin]} className="relative">
         <CarouselContent className="flex gap-4">
           {projectList.map((project, index) => (
@@ -43,7 +40,11 @@ function Projects({ limit }: ProjectsProps) {
             >
               <Link href={`/projects/${project.slug}`}>
                 <ProjectLayout1
-                  image={Array.isArray(project.image) ? project.image[0] : project.image}
+                  image={
+                    Array.isArray(project.image)
+                      ? project.image[0]
+                      : project.image
+                  }
                   title={project.title}
                   description={project.description}
                   direction={index % 2 === 0 ? "left" : "right"}
