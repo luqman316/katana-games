@@ -9,7 +9,7 @@ type ProjectLayoutProps = {
   direction: string;
 };
 
-function ProjectLayout({
+function ProjectLayout1({
   image,
   title,
   description,
@@ -57,4 +57,4 @@ function ProjectLayout({
   );
 }
 
-export default ProjectLayout;
+export default ProjectLayout1;

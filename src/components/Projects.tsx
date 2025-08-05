@@ -14,6 +14,7 @@ import {
 
 import Autoplay from "embla-carousel-autoplay";
 import ProjectLayout from "@/components/ProjectLayout";
+import ProjectLayout1 from "@/components/ProjectLayout";
 
 type ProjectsProps = {
   limit?: number;
@@ -41,7 +42,7 @@ function Projects({ limit }: ProjectsProps) {
               className="basis-1/1 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
             >
               <Link href={`/projects/${project.slug}`}>
-                <ProjectLayout
+                <ProjectLayout1
                   image={Array.isArray(project.image) ? project.image[0] : project.image}
                   title={project.title}
                   description={project.description}
