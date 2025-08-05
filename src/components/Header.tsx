@@ -30,6 +30,14 @@ function Header() {
                 <div className="">
                   <ul className="flex items-center gap-6 mt-2">
                     <li className="relative">
+                      <Link
+                        href="/games"
+                        className="transition-colors duration-300 font-bold  hover:text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full"
+                      >
+                        Games
+                      </Link>
+                    </li>
+                    <li className="relative">
                       <a
                         href="#"
                         className="transition-colors duration-300 font-bold  hover:text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full"

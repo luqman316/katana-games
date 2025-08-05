@@ -16,7 +16,7 @@ const client = [
 function Client() {
   return (
     <div className="min-h-screen">
-      <div className="container mx-auto px-14 py-6 flex  items-center">
+      <div className="container mx-auto px-14 py-6 flex mt-24 items-center">
         <div>
           {/* 1st div */}
           <div>

@@ -52,7 +52,7 @@ function About() {
         </div>
       </div>
       {/* projects numbers */}
-      <div className="grid grid-cols-1 xs:grid-cols-2 mt-10 md:grid-cols-3 gap-4 sm:gap-6 w-full max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 xs:grid-cols-2 mt-24 md:grid-cols-3 gap-4 sm:gap-6 w-full max-w-5xl mx-auto">
         {stats.map((item, index) => (
           <motion.div
             key={index}
