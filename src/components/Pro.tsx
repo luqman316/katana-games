@@ -8,19 +8,39 @@ import {
 } from "@/components/ui/carousel";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 import { projects } from "@/data/projects";
 import Autoplay from "embla-carousel-autoplay";
 import ProjectLayout1 from "./ProjectLayout";
+import { ProjectGridSkeleton } from "./ProjectSkeleton";
 
 type ProjectsProps = {
   limit?: number;
 };
 
 function ProjectsGame({ limit }: ProjectsProps) {
+  const [isLoading, setIsLoading] = useState(true);
   const projectList = limit ? projects.slice(0, limit) : projects;
 
   const autoplayPlugin = Autoplay({ delay: 4000 });
+
+  useEffect(() => {
+    // Simulate loading time for better UX
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="container mx-auto px-4 sm:px-6 py-6 text-white">
+        <ProjectGridSkeleton count={limit || 4} />
+      </div>
+    );
+  }
 
   return (
     <motion.div
