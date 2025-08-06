@@ -10,7 +10,7 @@ const stats = [
 
 function About() {
   return (
-    <div className="container mx-auto px-14 py-6 mt-24 min-h-screen flex flex-col justify-center items-center">
+    <div className="container mx-auto px-14 py-6  flex flex-col justify-center items-center">
       <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-16">
         <div className="flex flex-col  p-5 justify-center md:items-start max-w-max items-center text-balance md:text-left">
           <p className="text-sm mb-2 text-green-500 font-semibold animate-pulse">

@@ -33,8 +33,8 @@ const services = [
 
 function Service() {
   return (
-    <div className="min-h-screen flex items-center ">
-      <div className="container mx-auto px-14 py-6 mt-24 ">
+    <div className=" flex items-center ">
+      <div className="container mx-auto px-14 py-6  ">
         <div>
           {/* 1st div */}
           <div>

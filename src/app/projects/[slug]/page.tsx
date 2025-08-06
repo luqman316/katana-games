@@ -59,7 +59,7 @@ export default function ProjectPage() {
     );
 
   return (
-    <div className="container mx-auto px-2 sm:px-4 py-6 sm:py-10 md:py-14 lg:py-20">
+    <div className="container mx-auto px-14 sm:px-4 py-6 sm:py-10 md:py-14 lg:py-20">
       <div className="text-white w-full  ">
         <h1 className="text-xl xs:text-2xl mt-36 text-amber-500 sm:text-4xl md:text-5xl font-extrabold underline underline-offset-8 mb-3 sm:mb-4 text-balance break-words">
           {project.title}

@@ -7,7 +7,7 @@ import React from 'react'
 
 function Hero() {
   return (
-     <div className="container mx-auto px-14 py-6 flex justify-center min-h-screen items-center">
+     <div className="container mx-auto px-14 py-6 flex justify-center mt-36 items-center">
           <div className="grid grid-cols-2 gap-10">
             <motion.div
               initial={{ x: 100, opacity: 0 }}

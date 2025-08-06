@@ -2,8 +2,6 @@
 import { projects } from "@/data/projects";
 import { motion } from "framer-motion";
 import Link from "next/link";
-// import ProjectLayout from "./ProjectLayout";
-
 import {
   Carousel,
   CarouselContent,

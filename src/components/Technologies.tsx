@@ -77,7 +77,7 @@ const highlights = [
 function Technologies() {
   return (
     <div>
-      <div className="container mx-auto px-14 py-6 mt-24 min-h-screen flex items-center">
+      <div className="container mx-auto px-14 py-6  flex items-center">
         <div>
           {/* 1st div */}
           <div>

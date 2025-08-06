@@ -3,7 +3,7 @@ import Projects from '@/components/Projects';
 
 function Games() {
   return (
-    <div className='min-h-screen'>
+    <div className=''>
         <div className='container mx-auto px-14 py-6 flex flex-col items-start '>
         <div>
              {/* 1st div */}

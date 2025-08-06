@@ -10,12 +10,17 @@ function MainPage() {
   return (
     <>
       <Hero />
+      <br />
       <Games/>
+      <br />
       <About />
+      <br />
       <Service />
+      <br />
       <Technologies />
-      {/* <ProjectNum/> */}
+      <br />
       <Client />
+      <br />
       <Reviews />
     </>
   );
