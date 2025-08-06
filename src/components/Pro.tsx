@@ -1,8 +1,4 @@
 "use client";
-import { projects } from "@/data/projects";
-import { motion } from "framer-motion";
-import ProjectLayout1 from "@/components/ProjectLayout";
-import Link from "next/link";
 import {
   Carousel,
   CarouselContent,
@@ -10,14 +6,18 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
+import { projects } from "@/data/projects";
 import Autoplay from "embla-carousel-autoplay";
+import ProjectLayout1 from "./ProjectLayout";
 
 type ProjectsProps = {
   limit?: number;
 };
 
-function Projects({ limit }: ProjectsProps) {
+function ProjectsGame({ limit }: ProjectsProps) {
   const projectList = limit ? projects.slice(0, limit) : projects;
 
   const autoplayPlugin = Autoplay({ delay: 4000 });
@@ -69,4 +69,4 @@ function Projects({ limit }: ProjectsProps) {
   );
 }
 
-export default Projects;
+export default ProjectsGame;
