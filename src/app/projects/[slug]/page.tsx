@@ -117,17 +117,17 @@ export default function ProjectPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 w-full mt-8 mb-4">
             {project.videos.map((vid, i) => (
               <div
-                key={i}
-                className="relative w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[350px] rounded-md overflow-hidden"
+          key={i}
+          className="relative w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[350px] rounded-md overflow-hidden"
               >
-                <video
-                  src={vid}
-                  loop
-                  autoPlay
-                  muted
-                  // controls
-                  className="w-full h-full object-cover rounded-md"
-                />
+          <video
+            src={vid}
+            loop
+            autoPlay={typeof window !== "undefined" && window.innerWidth >= 768}
+            muted
+            // controls
+            className="w-full h-full object-cover rounded-md"
+          />
               </div>
             ))}
           </div>
