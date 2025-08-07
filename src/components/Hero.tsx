@@ -173,7 +173,7 @@ function Hero() {
     <div className="container mx-auto px-6 sm:px-10 md:px-14 py-10 min-h-screen flex flex-col lg:flex-row items-center justify-between gap-10">
       {/* Left Section - Text Content */}
       <div className="w-full lg:w-1/2 order-1 lg:order-1">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold leading-snug">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mt-16 leading-snug">
           <span className="text-5xl sm:text-6xl text-red-600">T</span>RANS
           <span className="text-red-600 text-5xl sm:text-6xl">F</span>
           <span>ORMING </span>

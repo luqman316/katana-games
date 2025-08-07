@@ -50,7 +50,7 @@ function Service() {
             </p>
           </div>
           {/* 2nd div */}
-          <div className="mt-12 lg:mt-24">
+          <div className="mt-12 lg:mt-10">
             {/* Mobile/Tablet Grid Layout */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:hidden">
               {services.map((service, index) => (
