@@ -45,7 +45,7 @@ export default function CustomCursor() {
   return (
     <div
       id="cursor-light"
-      className="pointer-events-none fixed top-0 left-0 w-[150px] h-[150px] rounded-full bg-yellow-500 blur-3xl z-40 mix-blend-soft-light transition-transform duration-200 ease-out"
+      className="pointer-events-none fixed top-0 left-0 w-[150px] h-[150px] rounded-full bg-yellow-600 blur-3xl z-40 mix-blend-soft-light transition-transform duration-200 ease-out"
     />
   );
 }

@@ -303,35 +303,47 @@ function Reviews() {
 
   return (
     <div className="">
-      <div className="container mx-auto px-4 py-6  flex flex-col items-center">
-        <div>
+      <div className="container mx-auto px-3 sm:px-4 lg:px-14 py-3 sm:py-4 lg:py-6 flex flex-col items-center">
+        <div className="w-full">
           {/* Heading */}
-          <div className="flex items-start">
-            <h1 className="text-4xl font-bold mb-8 hover:cursor-pointer hover:animate-pulse uppercase ">
-              <span className="text-6xl text-red-600">C</span>lients{" "}
-              <span className="text-6xl text-red-600">R</span>eviews
+          <div className="flex items-start justify-center lg:justify-start">
+            <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8 hover:cursor-pointer hover:animate-pulse uppercase text-center lg:text-left">
+              <span className="text-3xl sm:text-4xl lg:text-6xl text-red-600">
+                C
+              </span>
+              lients{" "}
+              <span className="text-3xl sm:text-4xl lg:text-6xl text-red-600">
+                R
+              </span>
+              eviews
             </h1>
           </div>
 
           {/* Carousel */}
           <Carousel
             plugins={[autoplayPlugin]}
-            className="relative w-full felx justify-center max-w-7xl"
+            className="relative w-full flex justify-center max-w-7xl mx-auto"
           >
-            <CarouselContent className="flex gap-4 p-10">
+            <CarouselContent className="flex gap-1 sm:gap-2 lg:gap-4 p-2 sm:p-4 lg:p-10">
               {reviews.map((review, index) => (
                 <CarouselItem
                   key={index}
-                  className="basis-1/1 sm:basis-1/2 md:basis-1/3 justify-center flex"
+                  className="basis-full sm:basis-1/2 lg:basis-1/3 justify-center flex"
                 >
-                  <div className="bg-transparent shadow-2xl border border-gray-500 p-14 rounded-xl text-center h-full flex flex-col justify-center">
-                    <h1 className="text-2xl font-bold text-red-600 mb-4">
+                  <div className="bg-transparent shadow-2xl border border-gray-500 p-4 sm:p-6 md:p-8 lg:p-14 rounded-xl text-center h-full flex flex-col justify-center min-h-[250px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[360px] w-full">
+                    <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-red-600 mb-2 sm:mb-3 lg:mb-4">
                       {review.name}
                     </h1>
-                    <p className="text-gray-300 mb-6">{review.content}</p>
-                    <div className="flex justify-center gap-1 text-yellow-500">
+                    <p className="text-gray-300 mb-3 sm:mb-4 lg:mb-6 text-xs sm:text-sm md:text-base leading-relaxed px-1">
+                      {review.content}
+                    </p>
+                    <div className="flex justify-center gap-0.5 sm:gap-1 text-yellow-500">
                       {[...Array(5)].map((_, i) => (
-                        <FontAwesomeIcon key={i} icon={faStar} />
+                        <FontAwesomeIcon
+                          key={i}
+                          icon={faStar}
+                          className="text-xs sm:text-sm md:text-base"
+                        />
                       ))}
                     </div>
                   </div>
@@ -340,8 +352,8 @@ function Reviews() {
             </CarouselContent>
 
             {/* Navigation Buttons */}
-            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 z-10" />
-            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 z-10" />
+            <CarouselPrevious className="absolute left-1 sm:left-2 lg:left-0 top-1/2 -translate-y-1/2 z-10 h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10" />
+            <CarouselNext className="absolute right-1 sm:right-2 lg:right-0 top-1/2 -translate-y-1/2 z-10 h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10" />
           </Carousel>
         </div>
       </div>

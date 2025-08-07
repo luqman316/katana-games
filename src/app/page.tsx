@@ -14,15 +14,25 @@ function MainPage() {
       <br />
       <Games />
       <br />
-      <About />
+      <div id="about">
+        <About />
+      </div>
       <br />
-      <Service />
+      <div id="service">
+        <Service />
+      </div>
       <br />
-      <Technologies />
+      <div id="technologies">
+        <Technologies />
+      </div>
       <br />
-      <Client />
+      <div id="client">
+        <Client />
+      </div>
       <br />
-      <Reviews />
+      <div id="reviews">
+        <Reviews />
+      </div>
     </PageTransition>
   );
 }

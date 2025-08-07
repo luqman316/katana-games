@@ -14,9 +14,7 @@ const highlights = [
   {
     title: "Unity Game Development",
     description: "Built frameworks powering successful games for years.",
-    icon: (
-      <FaUnity className="text-2xl sm:text-3xl lg:text-4xl text-gray-950" />
-    ),
+    icon: <FaUnity className="text-2xl sm:text-3xl lg:text-4xl text-white" />,
   },
   {
     title: "Unreal Engine Development",
@@ -76,18 +74,19 @@ const highlights = [
 ];
 function Technologies() {
   return (
-    <div>
-      <div className="container mx-auto px-14 py-6  flex items-center">
+    <div className="">
+      <div className="container mx-auto px-4 lg:px-14 py-4 lg:py-6 flex items-center">
         <div>
           {/* 1st div */}
-          <div>
-            <h1 className="text-4xl font-bold mb-4 hover:cursor-pointer hover:animate-pulse uppercase">
-              <span className="text-6xl text-red-600">T</span>echnology{" "}
-              <span className="text-6xl text-red-600">S</span>tack
+          <div className="text-center lg:text-left">
+            <h1 className="text-2xl lg:text-4xl font-bold mb-4 hover:cursor-pointer hover:animate-pulse uppercase">
+              <span className="text-4xl lg:text-6xl text-red-600">T</span>
+              echnology{" "}
+              <span className="text-4xl lg:text-6xl text-red-600">S</span>tack
             </h1>
           </div>
           {/* 2nd div */}
-          <div className="flex justify-center mt-16 items-center">
+          <div className="flex justify-center mt-8 lg:mt-16 items-center">
             <motion.div
               initial={{ x: -80, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -95,7 +94,7 @@ function Technologies() {
               transition={{ duration: 0.8, ease: "easeInOut" }}
               className="flex flex-col justify-center  mx-auto items-center md:mx-0"
             >
-              <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 items-center justify-center gap-16 sm:gap-3 md:gap-6 mt-4 sm:mt-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 items-center justify-center gap-4 sm:gap-6 lg:gap-16 mt-4 sm:mt-6">
                 {highlights.map((item, index) => (
                   <motion.div
                     key={index}
@@ -108,14 +107,14 @@ function Technologies() {
                       delay: index * 0.08,
                       ease: "easeOut",
                     }}
-                    className="p-2 sm:p-3 rounded-2xl bg-gray-700 flex-row justify-center  items-center group hover:bg-white/10 transition-all shadow-md hover:shadow-lg hover:shadow-indigo-500/20"
+                    className="p-3 sm:p-4 lg:p-2 rounded-2xl flex-row justify-center items-center group hover:bg-gradient-to-r from-red-950/25 to-black transition-all shadow-md hover:shadow-lg hover:shadow-indigo-500/20"
                   >
                     <div className="mb-2 flex items-center justify-center">
                       <span className="bg-white/10 rounded-full p-2 sm:p-3 group-hover:scale-110 transition-transform duration-200">
                         {item.icon}
                       </span>
                     </div>
-                    <h3 className="text-xs sm:text-base md:text-lg font-bold text-indigo-300 group-hover:text-indigo-400 text-center">
+                    <h3 className="text-xs sm:text-sm lg:text-base xl:text-lg font-bold text-indigo-300 group-hover:text-indigo-400 text-center leading-tight">
                       {item.title}
                     </h3>
                   </motion.div>

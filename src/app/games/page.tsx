@@ -10,10 +10,10 @@ function WorkPage() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="container mx-auto px-14 sm:px-4 py-6 sm:py-8 text-white"
+      className="container mx-auto px-14 sm:px-4 py-6 sm:py-8 mt-36 text-white"
     >
-      <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl mb-2 font-extrabold underline underline-offset-8 tracking-tight text-gray-100">
-        Projects
+      <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-4xl uppercase mb-2 font-extrabold  tracking-tight text-gray-100">
+        <span className="text-red-600 text-6xl">P</span>rojects
       </h1>
       <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mt-4 sm:mt-8">
         {projects.map((project, index) => (

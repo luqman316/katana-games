@@ -36,7 +36,7 @@ function ProjectsGame({ limit }: ProjectsProps) {
 
   if (isLoading) {
     return (
-      <div className="container mx-auto px-4 sm:px-6 py-6 text-white">
+      <div className="container mx-auto px-4 py-4 text-white">
         <ProjectGridSkeleton count={limit || 4} />
       </div>
     );
@@ -47,14 +47,14 @@ function ProjectsGame({ limit }: ProjectsProps) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="container mx-auto px-4 sm:px-6 py-6  text-white"
+      className="container mx-auto px-4 py-4 text-white"
     >
-      <Carousel plugins={[autoplayPlugin]} className="relative">
-        <CarouselContent className="flex gap-4">
+      <Carousel plugins={[autoplayPlugin]} className="relative w-full">
+        <CarouselContent className="flex gap-2">
           {projectList.map((project, index) => (
             <CarouselItem
               key={project.slug}
-              className="basis-1/1 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
+              className="basis-full min-[480px]:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
             >
               <Link href={`/projects/${project.slug}`}>
                 <ProjectLayout1
@@ -73,14 +73,25 @@ function ProjectsGame({ limit }: ProjectsProps) {
         </CarouselContent>
 
         {/* Navigation Buttons */}
-        <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 z-10" />
-        <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 z-10" />
+        <CarouselPrevious className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 hidden min-[480px]:flex" />
+        <CarouselNext className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 hidden min-[480px]:flex" />
       </Carousel>
 
-      {/* Optional: More projects link */}
-      <div className="mt-6 text-center">
+      {/* Mobile Navigation Dots (Optional) */}
+      <div className="flex justify-center mt-4 min-[480px]:hidden">
+        <div className="flex gap-2">
+          {Array.from({ length: Math.min(projectList.length, 3) }).map(
+            (_, i) => (
+              <div key={i} className="w-2 h-2 bg-gray-400 rounded-full"></div>
+            )
+          )}
+        </div>
+      </div>
+
+      {/* More projects link */}
+      <div className="mt-4 text-center">
         <Link href="/games">
-          <p className="text-sm md:text-base animate-bounce text-gray-400">
+          <p className="text-xs animate-bounce text-gray-400">
             For more projects, click here
           </p>
         </Link>
