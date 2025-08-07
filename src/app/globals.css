@@ -16,7 +16,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to left, #7f1d1d, #000000);
+  background: linear-gradient(to left, #230000, #000000);
 }
 
 /* Custom NProgress Loader Styles */
