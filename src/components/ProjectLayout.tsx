@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -18,10 +19,7 @@ function ProjectLayout1({
   const isLeft = direction === "left";
 
   return (
-    <motion.div
-      initial={{ x: isLeft ? -80 : 80, opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1 }}
-      viewport={{ once: true }}
+    <div
       className="rounded-xl overflow-hidden shadow-lg bg-gradient-to-t bg-red-900 from-black cursor-pointer group transition-all duration-200 h-[400px] sm:h-[450px] md:h-[500px]"
     >
       <div className="p-2 sm:p-4 flex flex-col h-full relative">
@@ -53,7 +51,7 @@ function ProjectLayout1({
           </p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
