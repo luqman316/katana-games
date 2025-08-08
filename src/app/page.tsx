@@ -33,6 +33,15 @@ function MainPage() {
       <div id="reviews">
         <Reviews />
       </div>
+
+      {/* <br />
+      <br />
+      <br />
+      <div className="flex justify-center items-center">
+        <div className=" border shadow-lg border-s-fuchsia-600 shadow-fuchsia-900 border-e-fuchsia-600 border-t-fuchsia-600 border-b-fuchsia-600  p-36 rounded-2xl ">
+          
+        </div>
+      </div> */}
     </PageTransition>
   );
 }
